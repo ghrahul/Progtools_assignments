@@ -2,7 +2,7 @@
 #include<bits/stdc++.h> 
 using namespace std; 
   
-
+//creating the structure of linkedlist
 struct Node 
 { 
     int coeff; 
@@ -10,7 +10,7 @@ struct Node
     struct Node *next; 
 }; 
               
-
+//for creating new node
 void create_node(int x, int y, struct Node **temp) 
 { 
     struct Node *r, *z; 
@@ -35,7 +35,7 @@ void create_node(int x, int y, struct Node **temp)
     } 
 } 
   
-
+//for adding two polynomials
 void polyadd(struct Node *poly1, struct Node *poly2, struct Node *poly) 
 { 
 while(poly1->next && poly2->next) 
@@ -89,7 +89,7 @@ while(poly1->next || poly2->next)
     } 
 } 
   
-
+//printing the result
 void show(struct Node *node) 
 { 
 while(node->next != NULL) 
@@ -101,7 +101,7 @@ while(node->next != NULL)
     } 
 } 
   
-
+//driver main function
 int main() 
 { 
     struct Node *poly1 = NULL, *poly2 = NULL, *poly = NULL; 
